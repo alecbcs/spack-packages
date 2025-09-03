@@ -10,6 +10,7 @@ on:
   pull_request_target:
     branches:
       - develop
+      - test/base-branch
 
 jobs:
   pr:
