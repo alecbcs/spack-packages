@@ -198,28 +198,28 @@ default:
     SPACK_CI_TARGET: "x86_64_v3"
     SCHEDULER_PARAMETERS: "-q cts2 -n 1 -c ${SPACK_CONCRETIZE_JOBS}"
   extends: [ ".generate-base" ]
-  tags: ["spack", "public", "medium", "x86_64_v3"]
+  tags: ["litmus", "public", "medium", "x86_64_v3"]
 
 .generate-aarch64:
   variables:
     SPACK_CI_TARGET: "aarch64"
     SCHEDULER_PARAMETERS: "-q cts2 -n 1 -c ${SPACK_CONCRETIZE_JOBS}"
   extends: [ ".generate-base" ]
-  tags: ["spack", "public", "medium", "aarch64"]
+  tags: ["litmus", "public", "medium", "aarch64"]
 
 .generate-neoverse_v1:
   variables:
     SPACK_CI_TARGET: "neoverse_v1"
     SCHEDULER_PARAMETERS: "-q cts2 -n 1 -c ${SPACK_CONCRETIZE_JOBS}"
   extends: [ ".generate-base" ]
-  tags: ["spack", "public", "medium", "aarch64", "neoverse_v1"]
+  tags: ["litmus", "public", "medium", "aarch64", "neoverse_v1"]
 
 .generate-neoverse-v2:
   variables:
     SPACK_CI_TARGET: "neoverse_v2"
     SCHEDULER_PARAMETERS: "-q cts2 -n 1 -c ${SPACK_CONCRETIZE_JOBS}"
   extends: [ ".generate-base" ]
-  tags: ["spack", "public", "medium", "neoverse_v2"]
+  tags: ["litmus", "public", "medium", "neoverse_v2"]
 
 .generate-win64:
   extends: [ ".base-job", ".generate-common" ]
@@ -545,7 +545,7 @@ radiuss-build:
   variables:
     SPACK_CI_TARGET: "x86_64_v4"
     SCHEDULER_PARAMETERS: "-q cts2 -n 1 -c ${SPACK_CONCRETIZE_JOBS}"
-  tags: ["spack", "public", "medium", "x86_64_v4"]
+  tags: ["litmus", "public", "medium", "x86_64_v4"]
 
 # Parallel Pipeline for aarch64 (reuses override image, but generates and builds on aarch64)
 
