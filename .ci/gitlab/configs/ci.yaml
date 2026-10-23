@@ -139,6 +139,9 @@ ci:
       after_script:: []
 
   - any-job:
+      id_tokens:
+        SITE_ID_TOKEN:
+          aud: https://gitlab.spack.io
       tags: ["spack"]
       image: "ghcr.io/spack/e4s-ubuntu-18.04:v2021-10-18"
       variables:
